@@ -22,7 +22,7 @@ export class ProductsController {
     @Body() createProductDto: CreateProductDto, 
     @UploadedFile(new ParseFilePipe({
       validators: [
-        new MaxFileSizeValidator({ maxSize: 10 * 1024 }),
+        new MaxFileSizeValidator({ maxSize: 5 * 1024 * 1024 }),
         new FileTypeValidator({ fileType: 'image/*' }),
       ],
     }),
